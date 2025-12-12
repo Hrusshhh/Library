@@ -53,6 +53,19 @@ docker compose up --build
 - Copy `.env.example` to `.env`
 - Containers automatically run `python manage.py migrate` on startup (see `entrypoint.sh`), but you can still run admin commands manually with `docker compose exec web ...`.
 
+## Heroku deploy link:
+
+https://library-hrushevskiii-13237c509128.herokuapp.com/swagger/
+
+## Seed/Test Accounts
+
+`python manage.py seed_library` creates:
+
+- Librarians: `librarian1` / `Lib1#pass`, `librarian2` / `Lib2#pass`
+- Readers: `reader1` / `Reader1pass!`, `reader2` / `Reader2pass!`
+
+Use these credentials for testing (JWT login, borrow/return, etc.).
+
 ## API Highlights
 
 - `POST /api/auth/register/` – register a new account.
